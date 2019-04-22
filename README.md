@@ -3,7 +3,7 @@
 ## Todo: 
 ### Pt. 1(?)
 * Choose mirror
-* ``pacstrap``
+* ``pacstrap /mnt base base-devel``
 * Set up fstab (prompt user to ``arch-chroot /mnt`` afterwards)
 
 ### Pt. 2(?)
@@ -22,6 +22,6 @@
 * ``EDITOR=nano visudo`` so ``wheel`` group can use sudo
 * ``mkinitcpio -p linux``
 * ``pacman -S grub os-prober``
-* Finish and user set up grub on their own so they don't fuck anything up
+* Finish and let user set up grub on their own so they don't fuck anything up
 
 ## Link to everything: https://paste.ubuntu.com/23956628/
