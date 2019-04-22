@@ -22,6 +22,13 @@
 * ``EDITOR=nano visudo`` so ``wheel`` group can use sudo
 * ``mkinitcpio -p linux``
 * ``pacman -S grub os-prober``
-* Finish and let user set up grub on their own so they don't fuck anything up
+* Let user set up grub on their own so they don't fuck anything up (and let them know that when they're finished, they need to reboot the system and remove the installation media)
+
+### Pt. 3(?)
+* Download ``xorg`` (read arch wiki for exactly what to download)
+* Download ``xf86`` video drivers (ask user what their graphics are; if they're on a virtual machine use ``vesa`` drivers)
+* Download wm/de (present user a list of possible window managers and DEs corresponding to a numbered bulleted list; if they're on a wm ask if they want a display manager or if they want to use ``xinit``; if they choose a display manager regardless of what wm/de they choose, enable it using ``systemd``)
+* Download siteweb and execute the script
+* When siteweb is finished, prompt the user to reboot the system
 
 ## Link to everything: https://paste.ubuntu.com/23956628/
