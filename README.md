@@ -1,6 +1,6 @@
 # Arch Linux Installation... ta-freakin-da.
 
-## Todo: 
+## Todo:
 ### Pt. 1(?)
 * Choose mirror
 * ``pacstrap /mnt base base-devel``
