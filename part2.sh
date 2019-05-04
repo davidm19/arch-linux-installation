@@ -45,27 +45,6 @@ useradd -m -g users -G wheel,storage,power -s /bin/bash "$username"
 passwd "$username"
 EDITOR=nano visudo
 
-# Set up other apps
-pacman -S xorg-server xorg-apps xorg-xinit
-echo "Which brand GPU are you using? (1 = Intel, 2 = AMD, 3 = NVIDIA): "
-read -r graphics_brand
-graphics_driver=""
-case $graphics_brand in
-"1")
-	graphics_driver="xf86-video-intel"
-	;;
-"2")
-	graphics_driver="xf86-video-amdgpu"
-	;;
-"3")
-	graphics_driver="xf86-video-nouveau"
-	;;
-*)
-	echo "Not a valid GPU brand."
-	;;
-esac
-pacman -S $graphics_driver
-
 # Execute final installation commands
 mkinitcpio -p linux
 pacman -S grub os-prober
