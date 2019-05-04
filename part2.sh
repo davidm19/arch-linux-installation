@@ -19,7 +19,7 @@ hwclock --systohc --utc
 # Configure repository to use multilib
 vi /etc/pacman.conf
 if [[ -N /etc/pacman.conf ]]; then
-	pacman -Syu
+	pacman -Sy
 fi
 
 # Configure hostname
