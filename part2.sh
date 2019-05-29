@@ -47,5 +47,7 @@ EDITOR=nano visudo
 
 # Execute final installation commands
 mkinitcpio -p linux
-pacman -S grub os-prober
-echo "You must now set up GRUB. Afterwards, please exit the chroot environment, unmount the installation media, and reboot the system. Thank you for choosing Arch Linux as your distribution, we hope you has a pleasant flight."
+pacman -S grub  efibootmgr
+grub-install --target=x86_64-efi --efi-directory=/efi --bootloader-id=GRUB
+grub-mkconfig -o /boot/grub/grub.cfg
+echo "You're done. Now exit from chroot, unmount the device (umount -R /mnt), reboot, and exit the installation media."
